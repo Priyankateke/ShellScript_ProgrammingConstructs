@@ -14,11 +14,11 @@ while [ $rupees -lt $MAXIMUM_RS ] && [ $rupees -gt $MINIMUM_RS ]
 do
 	randomNumber=$(( RANDOM%2 ))
 	bet=$((bet+1))
-	if [ $randomNumber -eq 0 ]; then
-		rupees=$(( rupees-1 ))
+	if [ $randomNumber -eq 1 ]; then
+		rupees=$(( rupees+1 ))
 		win=$(( win+1 ))
 	else
-		rupees=$(( rupees+1 ))
+		rupees=$(( rupees-1 ))
 		lose=$(( lose+1 ))
 	fi
 done
