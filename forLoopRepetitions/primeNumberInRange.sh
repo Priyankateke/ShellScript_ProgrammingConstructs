@@ -1,7 +1,6 @@
 #!/bin/bash -x
 
 read -p "Enter the range : " lower higher
-half=$((number/2))
 
 for(( number=lower; number<=higher; number++ ))
 do
@@ -14,5 +13,5 @@ do
 	done
 	if [ $counter -eq $((half+1)) ]; then
 		echo -e "$number\t"
-	fi	
+	fi
 done
