@@ -3,14 +3,15 @@
 #constants
 TOTAL_VALUES=5
 
-#variables
-sum=0
-
 #getting 5 random 2 digit number and calculating sum
-for(( counter=1;counter<=TOTAL_VALUES;counter++ ))
-do
-	sum=$(( sum+(RANDOM%90+10) ))
-done
+firstValue=$(( RANDOM%90+10))
+secondValue=$(( RANDOM%90+10))
+thirdValue=$(( RANDOM%90+10))
+fourthValue=$(( RANDOM%90+10))
+fifthValue=$(( RANDOM%90+10))
+
+#sum of 5 random 2 digit numbers
+sumOfValues=$((firstValue+secondValue+thirdValue+fourthValue+fifthValue))
 
 #average of 5 random 2 digit numbers
-average=$((sum/TOTAL_VALUES))
+average=$(echo "scale=2; $sumOfValues/$TOTAL_VALUES" | bc )
